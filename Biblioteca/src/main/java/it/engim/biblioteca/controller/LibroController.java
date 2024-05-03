@@ -33,6 +33,11 @@ public class LibroController {
             return LibroRepository.aggiungiLibro(libro);
         }
 
+        @GetMapping("/getLibriByGenere")
+         public static List<Libro> getLibriByGenere(@RequestParam String genere)
+        {
+            return LibroRepository.selezionaLibroByGenere(genere);
+        }
 
-}//end
+        }//end
 
